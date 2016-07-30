@@ -4,5 +4,5 @@ var app = express();
 app.use(express.static('petsApp'));
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Pets app listening on port 3000');
 });
