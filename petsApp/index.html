@@ -34,6 +34,10 @@
         <div class="md-list-item-text compact">
           <h3>{{pet.name.$t}}</h3>
           <p>{{pet.animal.$t}}</p>
+          <p>{{pet.age.$t}}, {{pet.size.$t}}</p>
+          <div ng-repeat="breed in pet.breeds.breed">
+            <p>{{breed.$t}}</p>
+          </div>
         </div>
         <md-divider ng-if="!$last"></md-divider>
       </md-list-item>
