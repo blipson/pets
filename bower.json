@@ -3,6 +3,6 @@
     "version": "0.0.7",
     "dependencies": {
         "angular": "1.5.8",
-        "materialize": "latest"
+        "angular-material": "latest"
     }
 }

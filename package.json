@@ -4,6 +4,7 @@
     "dependencies" : {
         "express" : "latest",
         "gulp" : "latest",
-        "materialize-css": "latest"
+        "node-sass": "latest",
+        "gulp-sass": "latest"
     }
 }

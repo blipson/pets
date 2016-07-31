@@ -1,15 +1,42 @@
 <!doctype html>
-<html ng-app>
+<html>
 <link rel="shortcut icon" href="">
-  <head>
-    <script src="../bower/angular/angular.min.js"></script>
-  </head>
-  <body>
-    <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
+<head>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script language="javascript" src="js/petsApp.js"></script>
+</head>
+<body ng-app="petsApp">
+  <div ng-controller="inputController as ctrl" ng-cloak>
+    <md-content layout-padding>
+      <form name="projectForm">
+        <md-input-container class="md-block">
+          <label>User Name</label>
+          <input name="userName" ng-model="userName">
+        </md-input-container>
+      </form>
+    </md-content>
+    <div flex-xs="" flex-gt-xs="25" layout="column" class="layout-column flex-xs flex-gt-xs-25">
+      <md-card class="_md md-default-theme">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{ userName }}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row">
+          <md-button ng-click="clearName()">clear</md-button>
+        </md-card-actions>
+      </md-card>
     </div>
-  </body>
+  </div>
+</body>
 </html>
