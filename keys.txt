@@ -1,0 +1,6 @@
+API Key
+688edd00993ee8e4c054a8e2d77b8271
+API Secret
+aa3e4e38dc449762036f6c917cae26e1
+API Status
+Active

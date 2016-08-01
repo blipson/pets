@@ -1,0 +1,29 @@
+<div ng-controller="searchController as ctrl" ng-cloak>
+  <md-content layout-padding>
+    <form name="projectForm">
+      <md-input-container class="md-block">
+        <label>ZIP Code</label>
+        <input name="zip" ng-model="zip">
+        <md-button ng-click="getPets()">Get Pets</md-button>
+      </md-input-container>
+    </form>
+  </md-content>
+  <div ng-show="showLoadingIcon" style="width: 150px; margin-left: auto; margin-right: auto;">
+    <img src="../img/loading.gif" align="middle"/>
+  </div>
+  <md-list ng-show="!showLoadingIcon">
+    <md-subheader class="md-no-sticky">Pets Near You</md-subheader>
+    <md-list-item class="md-2-line contact-item" ng-repeat="pet in pets">
+      <img ng-src="{{pet.media.photos.photo[0].$t}}" class="md-avatar" alt="{{contact.name}}" />
+      <div class="md-list-item-text compact">
+        <h2>{{pet.name.$t}}</h3>
+          <p>{{pet.animal.$t}}</p>
+          <p>{{pet.age.$t}}, {{pet.size.$t}}</p>
+          <div ng-repeat="breed in pet.breeds.breed">
+            <p>{{breed.$t}}</p>
+          </div>
+        </div>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+    </md-list>
+  </div>
