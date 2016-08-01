@@ -4,7 +4,8 @@
   var app = angular.module('petsApp');
   app.controller('searchController', searchController);
 
-  function searchController ($scope, $http, $routeParams) {
+  function searchController ($scope, $rootScope, $http, $routeParams) {
+    $rootScope.bodyStyle = {};
     $scope.zip = $routeParams.zip;
     $scope.petKey = "688edd00993ee8e4c054a8e2d77b8271";
     $scope.pets = [];

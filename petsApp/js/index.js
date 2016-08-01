@@ -7,7 +7,13 @@
   })
   .controller('indexController', indexController);
 
-  function indexController ($scope, $http, $window) {
+  function indexController ($scope, $rootScope, $http, $window) {
+    $rootScope.bodyStyle = {
+        'background-image': 'url("../img/bckgrd.jpg")',
+        'background-repeat': 'no-repeat',
+        'background-attachment': 'fixed',
+        'background-size': 'cover'
+    };
     $scope.zip = "";
 
     $scope.go = function ( path ) {

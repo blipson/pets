@@ -1,9 +1,4 @@
-body {
-    background-image: url("../img/bckgrd.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
+
 
 #mainForm {
   min-height: 500px
